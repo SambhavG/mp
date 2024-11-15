@@ -4,8 +4,8 @@
 	// import { Button } from "$lib/components/ui/button";
 
 	let init = '';
-	let allNames: string[] = [];
-	let names: string[] = [];
+	let allNames: string[][] = [];
+	let names: string[][] = [];
 
 	//on mount, load in the file names.json
 	onMount(async () => {
@@ -16,7 +16,6 @@
 			allNames = allNames.map((name) => {
 				let newName = name;
 				newName[1] = name[1].replace(', VICE PROVOST FOR UNDERGRADUATE EDUCATION', '');
-				//Make lowercase
 				newName[1] = newName[1].toLowerCase();
 				return name;
 			});

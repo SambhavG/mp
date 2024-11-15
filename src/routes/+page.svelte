@@ -41,7 +41,7 @@
 		Also try
 		<a class="text-blue-500" href="https://sambhavg.github.io/coursecorrect">/coursecorrect</a>
 		<a class="text-blue-500" href="https://sambhavg.github.io/dine">/dine</a>. Not affiliated with
-		marriagepact. Data may have errors
+		marriagepact. Data may have errors.
 	</div>
 </div>
 <div class="justify-top flex min-h-screen flex-col items-center text-2xl font-bold">

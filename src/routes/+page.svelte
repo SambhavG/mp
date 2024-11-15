@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { base } from '$app/paths';
 	// import { Button } from "$lib/components/ui/button";
 
 	let init = '';
@@ -9,7 +10,7 @@
 	//on mount, load in the file names.json
 	onMount(async () => {
 		try {
-			const res = await fetch('/names.json');
+			const res = await fetch(base + '/names.json');
 			const data = await res.json();
 			allNames = data;
 			allNames = allNames.map((name) => {
@@ -36,16 +37,19 @@
 	}
 </script>
 
-<div class="flex w-full flex-row flex-wrap justify-center self-center pt-4">
+<div class="flex w-full flex-col items-center justify-center pt-4">
 	<div class="mx-4 rounded-lg border-primary bg-white p-2">
+		Not affiliated with marriagepact. Data may have errors. Listing all Stanford undergrads, not
+		just signups.
+	</div>
+	<div class="mx-4 mt-2 rounded-lg border-primary bg-white p-2">
 		Also try
 		<a class="text-blue-500" href="https://sambhavg.github.io/coursecorrect">/coursecorrect</a>
-		<a class="text-blue-500" href="https://sambhavg.github.io/dine">/dine</a>. Not affiliated with
-		marriagepact. Data may have errors.
+		<a class="text-blue-500" href="https://sambhavg.github.io/dine">/dine</a>
 	</div>
 </div>
 <div class="justify-top flex min-h-screen flex-col items-center text-2xl font-bold">
-	<div class="m-10 mb-0 min-h-20">
+	<div class="m-2 mb-0 min-h-20">
 		<input
 			type="text"
 			bind:value={init}

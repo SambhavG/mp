@@ -17,6 +17,7 @@
 			allNames = allNames.map((name) => {
 				let newName = name;
 				newName[1] = name[1].replace(', VICE PROVOST FOR UNDERGRADUATE EDUCATION', '');
+				newName[1] = name[1].replace('\n', ' | ');
 				newName[1] = newName[1].toLowerCase();
 				return name;
 			});
